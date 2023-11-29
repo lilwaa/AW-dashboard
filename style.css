@@ -1,3 +1,6 @@
+body{
+    background-color: lightgrey;
+}
 .grid-container {
     display: grid;
     grid-template-areas: 'fitness mental'
@@ -46,4 +49,27 @@
 
 #safetySwitch:checked + .lever {
     background-color: #EBCDE7; /* Replace with your desired color */
+}
+
+.navbar-title {
+    color:#662852;
+    font-family: "Impact";
+}
+
+.cat{
+    color:#662852;
+    font-family: "Impact";
+    font-size: 25;
+
+}
+
+.center {
+    text-align:center;
+}
+
+.navbar {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: white;
 }

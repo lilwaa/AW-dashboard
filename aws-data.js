@@ -71,15 +71,26 @@ var fitness = new Chart(myContext, {
             title: { 
                 display: true,  
             }, 
+            legend:{
+                labels:{
+                    font: {size: 20}
+                }
+            }
         }, 
         scales: { 
             xAxes: [{
                 stacked: true,
+                ticks: {
+                    fontSize: 15,
+                    fontColor: 'black'}
               }],
               yAxes: [{
                 stacked: true,
+                ticks: {fontSize: 17,
+                        fontColor: 'black', 
+                        fontFamily: 'Arial'}
               }],
-        } 
+        }
     } 
 }); 
 
@@ -109,12 +120,12 @@ var myContext = document.getElementById("mental-survey").getContext('2d');
 var beforeMentalData = [
     {
         label: 'Strongly Disagree',
-        backgroundColor: "#CA8AA5",
+        backgroundColor: "#151A1D",
         data: [7, 6, 7, 0, 4, 13],
     },
     {
         label: 'Disagree',
-        backgroundColor: "#A66384",
+        backgroundColor: "#392A3D",
         data: [5, 7, 7, 13, 8, 6],
     },
     {
@@ -123,13 +134,13 @@ var beforeMentalData = [
         data: [7, 5, 5, 11, 2, 0],
     },
     {
-        label: 'Agree',
-        backgroundColor: "#392A3D",
+        label: 'Agree', 
+        backgroundColor: "#A66384",
         data: [7, 9, 5, 11, 12, 5],
     },
     {
         label: 'Strongly Agree',
-        backgroundColor: "#151A1D",
+        backgroundColor: "#CA8AA5",
         data: [10, 9, 12, 1, 10, 12],
     },
 ];
@@ -137,12 +148,12 @@ var beforeMentalData = [
 var afterMentalData = [
     {
         label: 'Strongly Disagree',
-        backgroundColor: "#CA8AA5",
+        backgroundColor: "#151A1D",
         data: [1, 4, 2, 0, 1],
     },
     {
         label: 'Disagree',
-        backgroundColor: "#A66384",
+        backgroundColor: "#392A3D",
         data: [2, 5, 3, 8, 3],
     },
     {
@@ -152,12 +163,12 @@ var afterMentalData = [
     },
     {
         label: 'Agree',
-        backgroundColor: "#392A3D",
+        backgroundColor: "#A66384",
         data: [9, 8, 9, 10, 13],
     },
     {
         label: 'Strongly Agree',
-        backgroundColor: "#151A1D",
+        backgroundColor: "#CA8AA5",
         data: [19, 11, 17, 13, 12],
     },
 ];
@@ -165,7 +176,7 @@ var afterMentalData = [
 var currentMentalData = beforeMentalData;
 
 var mental = new Chart(myContext, { 
-    type: 'bar', 
+    type: 'horizontalBar', 
     data: { 
         labels: ["I plan ahead", "I feel good about myself", 
         "I approach challenges positively", "I feel valued and appreciated by others", 
@@ -181,13 +192,16 @@ var mental = new Chart(myContext, {
         scales: { 
             xAxes: [{
                 stacked: true,
-                ticks: {
-                    maxRotation: 30,
-                    minRotation: 30
-                }
+                ticks: {fontSize: 17,
+                    fontColor: 'black', 
+                    fontFamily: 'Arial'}
+               
               }],
               yAxes: [{
                 stacked: true,
+                ticks: {fontSize: 17,
+                    fontColor: 'black', 
+                    fontFamily: 'Arial'}
               }],
         } 
     } 
@@ -219,12 +233,12 @@ var myContext = document.getElementById("career-survey").getContext('2d');
 var beforeCareerData = [
     {
         label: 'Strongly Disagree',
-        backgroundColor: "#CA8AA5",
+        backgroundColor: "#151A1D",
         data: [3, 1, 2, 5],
     },
     {
         label: 'Disagree',
-        backgroundColor: "#A66384",
+        backgroundColor: "#392A3D",
         data: [2, 0, 4, 3],
     },
     {
@@ -234,12 +248,12 @@ var beforeCareerData = [
     },
     {
         label: 'Agree',
-        backgroundColor: "#392A3D",
+        backgroundColor: "#A66384",
         data: [6, 6, 7, 7],
     },
     {
         label: 'Strongly Agree',
-        backgroundColor: "#151A1D",
+        backgroundColor: "#CA8AA5",
         data: [17, 29, 21, 18],
     },
 ];
@@ -247,12 +261,12 @@ var beforeCareerData = [
 var afterCareerData = [
     {
         label: 'Strongly Disagree',
-        backgroundColor: "#CA8AA5",
+        backgroundColor: "#151A1D",
         data: [2, 0, 0, 1],
     },
     {
         label: 'Disagree',
-        backgroundColor: "#A66384",
+        backgroundColor: "#392A3D",
         data: [2, 0, 1, 1],
     },
     {
@@ -262,12 +276,12 @@ var afterCareerData = [
     },
     {
         label: 'Agree',
-        backgroundColor: "#392A3D",
+        backgroundColor: "#A66384",
         data: [4, 0, 6, 4],
     },
     {
         label: 'Strongly Agree',
-        backgroundColor: "#151A1D",
+        backgroundColor: "#CA8AA5",
         data: [22, 30, 22, 21],
     },
 ];
@@ -275,7 +289,7 @@ var afterCareerData = [
 var currentCareerData = beforeCareerData;
 
 var career = new Chart(myContext, { 
-    type: 'bar', 
+    type: 'horizontalBar', 
     data: { 
         labels: ["I feel positive about school", "I am confident about graduating high school", 
     "I have educational goals for the next 5 years", "I have career goals for the next 5-10 years"], 
@@ -286,17 +300,21 @@ var career = new Chart(myContext, {
             title: { 
                 display: true, 
             }, 
+        
         }, 
+       
         scales: { 
             xAxes: [{
                 stacked: true,
-                ticks: {
-                    maxRotation: 30,
-                    minRotation: 30
-                }
+                ticks: {fontSize: 17,
+                    fontColor: 'black', 
+                    fontFamily: 'Arial'}
               }],
               yAxes: [{
                 stacked: true,
+                ticks: {fontSize: 17,
+                    fontColor: 'black', 
+                    fontFamily: 'Arial'}
               }],
         } 
     } 
@@ -399,13 +417,15 @@ var safety = new Chart(myContext, {
         scales: { 
             xAxes: [{
                 stacked: true,
-                ticks: {
-                    maxRotation: 30,
-                    minRotation: 30
-                }
+                ticks: {fontSize: 17,
+                    fontColor: 'black', 
+                    fontFamily: 'Arial'}
               }],
               yAxes: [{
                 stacked: true,
+                ticks: {fontSize: 17,
+                    fontColor: 'black', 
+                    fontFamily: 'Arial'}
               }],
         } 
     } 
