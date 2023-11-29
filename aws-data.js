@@ -404,7 +404,7 @@ var currentSafetyData = beforeSafetyData;
 var safety = new Chart(myContext, { 
     type: 'horizontalBar', 
     data: { 
-        labels: ["I know how to defend myself in a harmful situation", "I know where to get help for violence, abuse, or sexual assault", 
+        labels: ["I can defend myself in a harmful situation", "I know how to get help for violence/abuse/sexual assault", 
     "I feel confident in my knowledge of STDs", "I feel confident in my knowledge of pregnancy prevention"], 
         datasets: currentSafetyData, 
     }, 
@@ -423,7 +423,7 @@ var safety = new Chart(myContext, {
               }],
               yAxes: [{
                 stacked: true,
-                ticks: {fontSize: 17,
+                ticks: {fontSize: 13,
                     fontColor: 'black', 
                     fontFamily: 'Arial'}
               }],
